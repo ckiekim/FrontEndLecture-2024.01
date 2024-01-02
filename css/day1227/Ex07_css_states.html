@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            상태 가상 클래스
+
+            - 현재 태그의 상태에 따라서 스타일 적용
+            체크가 되어있는 상태, 체크가 안되어있는 상태
+
+            :checked
+            - 태그안에 checked속성이 있는 태그에게 스타일 적용
+
+            :enabled
+            - 태그안에 enabled 속성이 있는 태그에게 스타일 적용
+
+            :disabled
+            - 태그안에 disabled 속성이 있는 태그에게 스타일 적용
+            * 사용불가, 비활성화
+        */
+
+        input + span{
+            color: black;
+        }
+        /* input중 checked 가 된 태그의 형제중에 span 태그의 색상은 빨간색 */
+        input:checked + span{
+            color: red;
+        }
+        
+        input:hover + span{
+            background-color: rosybrown;
+        }
+        
+        input:active + span{
+            background-color: slateblue;
+        }
+        input:disabled + span{
+            background-color: brown;
+        }
+
+        input:checked + label{
+            color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="test" id="id1"><span> 체크박스1</span>
+    <input type="checkbox" name="test" id="id2" checked><span> 체크박스2</span>
+    <input type="checkbox" name="test" id="id3"><span> 체크박스3</span>
+    <input type="checkbox" name="test" id="id4" disabled> <span> 체크박스4</span>
+
+    <hr>
+    <br>
+    <input type="radio" name="radio" id="r1" checked><label for="r1">라디오1</label>
+    <input type="radio" name="radio" id="r2"><label for="r2">라디오2</label>
+</body>
+</html>

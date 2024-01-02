@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <fieldset> <!-- 입력값을 감싸는 태그(꾸미는)-->
+            <legend>회원가입</legend>
+            1. 이름 <input type="text" placeholder="이름"/> <br/>
+            2. 성별 <input type="radio" /> 남자
+        </fieldset>
+
+    </form>
+    <form action="#">
+        <fieldset> <!-- 입력값을 감싸는 태그(꾸미는)-->
+            <legend>회원가입</legend>
+            <ol>
+                <li>
+                    이름 <input type="text" placeholder="이름"/>
+                </li>
+                <li>
+                    성별 
+                    <!--
+                        label : input 태그가 아닌 다른 요소를 선택하더라도
+                                마치 input태그가 선택된것처럼 도와주는 태그
+                        <label for="값">
+                        <input id="값">
+                        label for="값" 과 input id="값" 이 같아야합니다. / 다르면 무관
+
+                        type="radio" 의 그룹설정을 돕는 속성 :  name속성
+                    -->
+                    <input type="radio" id="m" name="g" /><label for="m">남자</label>
+                    <input type="radio" id="w" name="g" /><label for="w">여자</label>
+                </li>
+                <li>
+                    <!--
+                        select : 여러 항목중에 하나를 선택하는 태그 *드롭다운
+                        option : select의 항목을 표현하는 태그
+
+                        select 내의 multiple
+                            - 드롭다운리스트형태가 아니라 다중선택 가능한 리스트형
+                        option 내의 selected
+                            - 처음 미리 선택되는 옵션을 지정
+                    -->
+                    직업
+                    <select>
+                        <option selected >프로그래머</option>
+                        <option>학생</option>
+                        <option>선생</option>
+                    </select>
+                </li>
+                <li>
+                    취미
+                    <input type="checkbox" id="chk1" checked /><label for="chk1">잠자기</label>
+                    <input type="checkbox" id="chk2"/><label for="chk2">먹기</label>
+                    <input type="checkbox" id="chk3"/><label for="chk3">숨쉬기</label>
+                    <input type="checkbox" id="chk4"/><label for="chk4">멍때리기</label>
+                </li>
+                <li>
+                    애인
+                    <input type="radio" id="y" name="cc"><label for="y">있다</label>
+                    <input type="radio" id="n" name="cc"><label for="n">없다</label>
+                </li>
+                <li>
+                    <input type="submit" value="확인"/>
+                    <button type="reset">취소</button>
+                </li>
+                <li>
+                    <!-- 
+                        textarea : 여러 줄으르 가진 텍스트를 입력받는 태그
+                        시작태그와 종료태그 사이에 문자가 입력
+                        * 그래서 시작태그와 종료태그를 붙여서 사용
+                        * 크기조절 : rows 가로줄 / cols 1줄당 글자수
+                    -->
+                    <textarea rows="5" cols="30" ></textarea>
+                </li>
+                <li>
+                    빈값 : <input type="text" required/>
+                </li>
+                <li>
+                    사이즈 : <input type="text" size="5"/>
+                </li>
+                <li>
+                    초기값 : <input type="text" value="초기값"/>
+                </li>
+                <li>
+                    초기값 변경X : <input type="text" value="초기값" readonly/>
+                </li>
+                <li>
+                    입력한계 : <input type="text" maxlength="5"/>
+                </li>
+                <li>
+                    미사용 : <input type="text" disabled/>
+                </li>
+            </ol>
+        </fieldset>
+
+    </form>
+</body>
+</html>

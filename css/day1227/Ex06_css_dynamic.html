@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: black;
+        }
+
+        a:link{
+            /* link: a태그의 링크가 한번도 안눌렸을때 속성 */
+            color: red;
+        }
+
+        a:visited{
+            /* visited; a태그의 링크가 한번이라도 눌렀을때 속성*/
+            color: royalblue;
+        }
+
+        a:hover{
+            /* 마우스가 해당 태그 위로 올라와있을때 */
+            /* 마우스가 a태그 위에 있을때 */
+            border-bottom: 2px solid blue;
+        }
+        a:active{
+            /* 마우스가 해당태그를 클릭을하고있을때(클릭유지) */
+            background-color: springgreen;
+        }
+
+        input:hover{
+            border: 10px solid orange;
+        }
+
+        input:focus{
+            border: 10px solid red;
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#1">
+        동적 의사 클래스 연습
+    </a>
+    <br>
+    <a href="#2">
+        동적 의사 클래스 연습
+    </a>
+    <br>
+    <a href="#3">
+        동적 의사 클래스 연습
+    </a>
+    <br>
+    <a href="#4">
+        동적 의사 클래스 연습
+    </a>    
+
+    <br><br>
+    <input type="text" value="test중입니다."/>
+</body>
+</html>

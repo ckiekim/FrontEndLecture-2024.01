@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table2 tr td:first-child{
+            font-weight: bolder;
+            background-color: lawngreen;
+            text-align: center;
+        }
+        
+        /* .table2 tr td[colspan]{
+            background-color: white;
+        } */
+        .table2 tr td:only-child{
+            background-color: white;
+        }
+        /* input 태그에 type 속성 있는 태그를 선택 */
+        /* input[type]{
+            cursor: pointer;
+        } */
+
+        /* input 태그 중 input태그의 type="text"가 아닌 태그 */
+        input:not(input[type="test"]){
+            cursor: pointer;
+        }
+
+        /* [type="file"]::-webkit-file-upload-button{
+            cursor: pointer;
+        } */
+
+        [type="file"]::file-selector-button {
+            width: 150px;
+            height: 30px;
+            background: #fff;
+            border: 1px solid rgb(77,77,77);
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover {
+                background: rgb(77,77,77);
+                color: #fff;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table2">
+        <table  border="1">
+            <tr>
+                <td>ID</td>
+                <td><input type="text" placeholder="ID를 입력하세요">
+                    <input type="button" value="ID중복확인" id="btn">
+                </td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password"><br><span>* 대소문자,숫자,조합 8~12자리</span></td>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td>이름</td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td>성별</td>
+                <td><input type="radio" name="gender" id="m2"><label for="m2">남성</label>
+                    <input type="radio" name="gender" id="w2"><label for="w2">여성</label>
+                </td>
+            </tr>
+            <tr>
+                <td>취미</td>
+                <td>
+                    <input type="checkbox" id="book"><label for="book">독서</label>
+                    <input type="checkbox" id="movie"><label for="movie">영화감상</label>
+                    <input type="checkbox" id="music"><label for="music">음악감상</label>
+                    <input type="checkbox" id="sports"><label for="sports">스포츠</label>
+
+                </td>
+            </tr>
+            <tr>
+                <td>언어</td>
+                <td>
+                    <select name="" id="">
+                        <option selected>선택</option>
+                        <option>JAVA</option>
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>건의사항</td>
+                <td>
+                    <textarea rows="10" cols="40"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>파일업로드</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="등록">
+                    <input type="button" value="취소">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // document.querySelector("id중복확인버튼")
+        // "선택자"
+        var btn = document.querySelector("#btn");
+        
+        btn.style = "font-size:25px"
+
+        btn.onclick = function(){
+            alert('id가 사용할수있습니다.');
+            
+        }
+    </script>
+
+</body>
+</html>

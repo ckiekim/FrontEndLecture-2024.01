@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .main{
+            padding: 10px;
+        }
+        .menu{
+            width: 800px;
+            border: 1px dotted black;
+            border-radius:10px
+        }
+        .menu div:first-child{
+            background-color: wheat;
+            padding: 50px;
+            font-weight: bolder;
+            font-size: 200%;
+            border-radius:10px
+        }
+        img{
+            display: block;
+            height: 150px;
+            width: 250px;
+        }
+        div table{
+            margin: auto;
+            padding: 10px;
+        }
+        table{
+            text-align: center;
+        }
+        table tr p{
+            padding: 10px;
+        }
+        table tr select{
+            padding: 3px;
+            margin: auto;
+        }
+        .menu div + div{
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="menu">
+            <div>
+                <h1>MENU</h1>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <td><img src="에스프레소.jpg">
+                        <p>에스프레소 1000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                        <td><img src="아메리카노.jpg">
+                        <p>아메리카노 2000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        <td><img src="카페라떼.jpg">
+                        <p>카페라떼 3000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </tr>
+                    <tr>
+                    <td><img src="s.jpg">
+                        <p>카푸치노 2000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                    <td><img src="s.jpg">
+                        <p>돌체라떼 1000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                            </td>
+                    <td><img src="s.jpg">
+                        <p>카페모카 1500원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td><img src="s.jpg">
+                        <p>자바칩 프라프치노 2000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                    <td><img src="s.jpg">
+                        <p>차이 티 1000원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                    <td><img src="s.jpg">
+                        <p>그린티 1500원</p>
+                        <select>
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                        </td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        <div class="mm">
+            <div>
+                <p>주문내역</p>
+            </div>
+            <div>
+                <p>총합 : </p>
+                <input type="text">
+                <p>원</p>
+                <input type="submit" value="주문하기">
+            </div>
+            <table>
+                <tr>
+                    <td>목록</td>
+                    <td>갯수</td>
+                    <td>삭제</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

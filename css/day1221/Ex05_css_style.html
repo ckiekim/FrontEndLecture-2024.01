@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            color: red;
+        }
+        .color1{
+            color: rgb(0,0,255);
+        }
+        .color2{
+            /* 
+                R, G, B : 255 255 255
+
+                R 0000 0000
+                G 0000 0000
+                B 0000 0000
+
+                255 까지의 숫자를 16진수로 표현하는 방법
+            */
+            color: #00FF00;
+        }
+
+        .color3{
+            background-color: lightblue;
+        }
+
+        .color4{
+            background-image: url(test.jpg); 
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 300px;
+        }
+        .color5{
+            /* 
+                ltr : left to right 오른쪽에서 왼쪽으로 간다
+                rtl : right to laft 왼쪽에서 오른쪽으로 간다
+            */
+            direction: rtl;
+            /* 글자 사이에 간격 */
+            letter-spacing: 10px;
+            /* 단어 사이에 간격 */
+            word-spacing: 20px;
+        }
+        
+        .color6{
+            /* 문자 들여쓰기 */
+            text-indent: 30px;
+            /* 문자정렬 : direction 보다 우선 적용 */
+            text-align: center;
+
+            /* 글자의 그림자 설정 */
+            text-shadow: 3px 2px lightcoral;
+        }
+
+        .color7{
+            text-decoration: line-through;
+        }
+        
+        a{
+            /* none : 기능이 없다 */
+            text-decoration: none;
+            color: rgb(0,0,0);
+        }
+        
+        p{
+            /* font-family 글꼴 */
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #font1{
+            font-family: Gungsuh;
+            font-style: italic;
+            font-variant: small-caps;
+
+        }
+
+        #font2{
+            font-weight: bolder;
+            font-size: 200%;
+
+            /* 
+                px : 스크린의 픽셀단위, 절대적크기, 기본 16px
+                em : 글꼴의 대문자M의 크기를 기준, 상대적크기
+                % : 기본글꼴크기를 기준
+
+            */
+        }
+
+        #font3{
+            font-size: 32px;
+        }
+
+        #font4{
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="color1"> 색상 테스트 </div>
+    <div class="color2"> 색상 테스트 </div>
+    <div class="color3"> 색상 테스트 </div>
+    <div class="color4"> 색상 테스트 </div>
+    <div class="color5"> 색상 테스트 </div>
+    <div class="color6"> 색상 테스트 </div>
+    <div class="color7"> 색상 테스트 </div>
+
+    <a href="#">이곳은 링크를 위한 태그입니다.</a>
+    <div>Font Testing...! 폰트테스트</div>
+    <p id="font1">Font Testing...! 폰트테스트 </p>
+    <p id="font2">Font Testing...! 폰트테스트 </p>
+    <p id="font3">Font Testing...! 폰트테스트 </p>
+    <p id="font4">Font Testing...! 폰트테스트 </p>
+    <p id="font5">Font Testing...! 폰트테스트 </p>
+</body>
+</html>

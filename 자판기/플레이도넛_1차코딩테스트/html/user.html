@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    
+    <title>자판기 - 사용자</title>
+    
+    <style>
+        * {
+            font-size: 13px;
+        }
+    </style>
+
+    <script type="text/javascript" src="../lib/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="../js/manager.js"></script>
+    <script type="text/javascript" src="../js/user.js"></script>
+</head>
+
+<body style="background-color: lightgrey;">
+
+    <div class="container">
+        <div class="col-lg-4 mx-auto text-center pt-5">
+            <h2 class="mb-4">🥤자판기🥤</h2>
+            <div class="d-flex justify-content-center" style="gap:0 20px;">
+                <a href="../index.html" type="button" id="product_manage"class="btn btn-light w-50">상품 관리</a>
+                <a href="user.html" type="button" class="btn btn-light w-50">상품 구매</a>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center flex-wrap pt-5" style="gap:0 20px;">
+            <!-- 자판기 -->
+            <section style="width: 400px;">
+                <div class="pb-3">
+                    <div class="card p-4">
+                        <!-- 인원 선택 -->
+                        <div class="mb-5 d-flex justify-content-between" style="gap:0 10px;">
+                            <button class="user_info btn btn-outline-secondary w-25 d-flex flex-column align-items-center">
+                                <img src="../img/유사원.png" class="w-50">
+                                <span class="user_name pt-2">유사원</span>
+                                <strong class="user_money">10,000</strong>
+                            </button>
+                            <button class="user_info btn btn-outline-secondary w-25 d-flex flex-column align-items-center">
+                                <img src="../img/이대리.png" class="w-50">
+                                <span class="user_name pt-2">이대리</span>
+                                <strong class="user_money">10,000</strong>
+                            </button>
+                            <button class="user_info btn btn-outline-secondary w-25 d-flex flex-column align-items-center">
+                                <img src="../img/김과장.png" class="w-50">
+                                <span class="user_name pt-2">김과장</span>
+                                <strong class="user_money">10,000</strong>
+                            </button>
+                            <button class="user_info btn btn-outline-secondary w-25 d-flex flex-column align-items-center">
+                                <img src="../img/박차장.png" class="w-50">
+                                <span class="user_name pt-2">박차장</span>
+                                <strong class="user_money">10,000</strong>
+                            </button>
+                        </div>
+
+                        <!-- 금액 투입 -->
+                        <div class="mb-3 d-flex">
+                            <input id="input_money" type="number" min="0" step="1000" class="form-control me-3" placeholder="금액을 투입해주세요.">
+                            <button id="input_money_btn" class="btn btn-secondary shadow-sm col-lg-4 col-5 disabled ">금액 투입</button>
+                        </div>
+
+                        <!-- 잔돈 반환 -->
+                        <div class="mb-5 d-flex">
+                            <div class="form-control border-0 bg-light me-3 d-flex justify-content-between">
+                                <span>잔액</span>
+                                <strong id="machine_money">0 원</strong>
+                            </div>
+                            <button id="machine_money_btn" class="btn btn-secondary shadow-sm col-lg-4 col-5 disabled">잔액 반환</button>
+                        </div>
+
+                        <!-- 메뉴 -->
+                        <ul id="menu_list" class="p-0 mb-0 d-flex flex-wrap justify-content-between">
+                            <li class="menu_info btn btn-outline-secondary d-flex flex-column justify-content-center w-100 shadow-sm p-4 mb-4 disabled">
+                                <strong>메뉴가 없습니다.</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 내역 -->
+            <section style="width: 400px;">
+                <div class="pb-3">
+                    <div class="card p-4 text-center">
+                        <!-- 주문 내역 -->
+                        <h5>주문 내역</h5>
+                        <div class="rounded-3 bg-light mb-4" >
+                            <ul id="order_list" class="p-4 m-0 overflow-scroll" style="height: 400px;">
+                                
+                            </ul>
+                        </div> 
+
+                        <div class="text-end">
+                            <button id="reset_btn" class="btn btn-dark w-50">재시작</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex07_table.html</title>
+</head>
+<body>
+    <!--
+        <table></table> : 테이블을 구성하기 위한 가장 큰 범위 태그
+        <tr></tr> : 가로줄을 만드는 태그 ()
+        <td></td> : 셀(칸)을 만드는 태그 ()
+       
+        * <th></th> : 표의 제목을 만드는 태그 (* td 대신 사용 )
+
+        * td : 기본값 : 보통글씨, 왼쪽정렬
+        * th : 기본값 : 굵은글씨, 가운데정렬
+        * thead / tbody
+    
+    -->
+    <!-- border="1" : 테이블의 윤곽선의 두께-->
+    <table border="1"> 
+        <tr>
+            <th>11111</th>
+            <th>22222</th>
+        </tr>
+        <tr>
+            <td>333333333</td>
+            <td>444444444</td>
+        </tr>
+    </table>
+    
+    <hr>
+
+    <table border="1">
+        <tr>
+            <th>언어</th>
+            <th>난이도</th>
+            <th>학습기간</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>하</td>
+            <td>1주</td>
+        </tr>                                                                                                                          
+        <tr>
+            <td>CSS</td>
+            <td>중</td>
+            <td>1주</td>
+        </tr>
+        <tr>
+            <td>javascript</td>
+            <td>상</td>
+            <td>2주</td>
+        </tr>
+    </table>
+
+    <!-- 
+        shift + alt + 화살표 : 한줄복사
+        alt + 화살표 : 한줄이동
+        tap : 들여쓰기
+        shift : tab
+        ctrl + / : 주석만들기, 풀기
+        ctrl + c : 복사
+        ctrl + x : 잘라내기
+        ctrl + v : 붙여넣기
+        ctrl + z : 실행취소, 되돌리기
+        ctrl + y : 실행취소를 복구,복원
+        shift + home : 커서 기준 앞으로 선택
+        shift + end : 커서 기준 뒤로 선택       
+    -->
+
+    <hr>
+    <!-- 테이블 병합 -->
+    <!-- 
+        colspan : 열 합치기 : "가로" 열 병합
+        rowspan : 행 합치기 : "세로" 행 병합
+    -->
+    <table border="1">
+        <tr>
+            <td colspan="2">1</td>
+            <td>테스트</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            
+            <td>4</td>
+        </tr>
+    </table>
+
+</body>
+</html>

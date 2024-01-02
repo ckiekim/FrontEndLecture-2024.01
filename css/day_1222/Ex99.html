@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            /* border: 1px solid red; */
+            width: 650px;
+            margin: auto;
+            padding-top: 150px;
+        }
+        #top{
+            /* border: 1px solid green; */
+            margin: auto;
+            width: 100px;
+            padding-bottom: 30px;
+        }
+        #st11{
+            width: 100px;
+        }
+        #middle{
+            /* border: 1px solid green; */
+            width: 650px;
+            margin: auto;
+            margin-bottom: 100px; 
+        }
+        #idpw{
+            /* border: 1px solid blue; */
+            width: 505px;
+            margin: auto;
+            
+            
+            
+        }
+        .idpwcl{
+            width: 500px;
+            height: 50px;
+            margin: auto;
+            font-size: large; 
+            color: red;
+            border-radius: 3px;
+            border: 1px solid rgb(220, 220, 220)
+                      
+            
+        }
+        .idpwcl:focus{
+            outline: none;
+        }
+        
+        
+        #login{
+            /* border: 1px solid blue; */
+            padding: 20px 0px 0px 0px;
+            margin: auto;
+            width: 505px;
+        }
+        #idic{
+            background-color: red;
+            color:  wheat;
+            width: 470px;
+            padding: 20px;
+            font-size:large;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            margin: auto;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+            
+        
+        .hr-sect {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 18px;
+        margin: 8px 0px;
+      }
+      .hr-sect::before,
+      .hr-sect::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
+      .hr-sect2{
+        padding-top: 25px;
+      }
+      #icon{
+        margin: auto;
+        padding: 20px 50px 50px 50px
+      }
+      .ic{
+        width: 70px;
+      }
+      #middlebot{
+        margin: auto;
+        width: 500px;
+      }
+      .jointag{
+        font-size: 18px;
+        padding: 0px 10px 0px 10px;
+      }
+      #bottom{
+        margin: auto    ;
+        width: 510;
+      }
+      #banner{
+        width: 650px;
+        display: block;
+        margin: auto;
+      }
+      #botfont{
+        color: gray;
+        margin: auto;
+        width: 400px;
+      }
+    
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="top">
+            <img src="img/11st.svg" id="st11">
+        </div>
+        <div id="middle">
+            <div id="idpw">
+            <input type="text" class="idpwcl" placeholder="아이디 입력" > <br/>
+            <input type="password" class="idpwcl" placeholder="비밀번호 8자~20자">
+        </div>
+            <div id="login">
+            <a href="#" id="idic" >로그인</a><br/>
+            <input type="checkbox" id="checkbox" class="checkbox">
+            <label for="checkbox">로그인 상태 유지</label>
+            <div class="hr-sect hr-sect2">또는 SNS 아이디 로그인</div>
+        </div>
+            <div id="icon">
+                <a href="#"><img src="img/sns-kakao.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-naver.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-tid.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-apple.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-payco.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-facebook.svg" class="ic"></a>
+                <a href="#"><img src="img/sns-phone.svg" class="ic"></a>
+            </div>
+            <div id="middlebot">
+                <a href="#" class="jointag">아이디찾기</a>
+                <a href="#" class="jointag">비밀번호찾기</a>
+                <a href="#" class="jointag">비회원 주문조회</a>
+                <a href="#" class="jointag">회원가입</a>
+            </div>
+        </div>
+        <div id="bottom">
+            <a href="#"><img src="img/banner.png" id="banner" ></a>
+            <p id="botfont">Copyright ⓒ 2019 11Steet Co.,Ltd. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            계층구조에서 특정 위치를 선택하기위한 기능
+
+            :first-child
+                - 모든 자식 요소(부모가있는)중에 맨앞에 있는 요소
+            :first-of-type
+                - 모든 자식 요소(부모가있는)중에 맨앞에 있는 "특정타입"의 요소
+            :last-of-type : 모든 자식 요소(부모가있는)중에 맨뒤에 있는 "특정타입"의 요소
+            :nth-of-type() : 모든 자식 요소 중에 몇번째 있는 특정 타입의 요소 선택
+            :nth-last-of-type()
+        */
+        .test1{
+            border: 2px solid black;
+        }
+        .test2{
+            border: 2px solid salmon;
+        }
+        .test3{
+            border: 2px solid greenyellow;
+        }
+        .test2 p:first-of-type{
+            color: red;
+            font-weight: bold;
+        }
+        .test3 p:last-of-type{
+            color: blue;
+            font-weight: bold;
+        }
+        /* n 이라는 단어가 허용 : n은 0부터 시작한다고 생각해주세요 */
+        .test4 p:nth-of-type(2){
+            color: tomato;
+            font-weight: bold;
+        }
+        .test4 p:nth-last-of-type(2), .test4 p:nth-last-of-type(3){
+            color: olive;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> 구조 가상 클래스 연습 </h1>
+    <div class="test1">
+        <div class="test2">
+            <p>이 p 태그는 div태그의 child입니다.</p>
+            <p>이 p 태그는 div태그의 child입니다.</p>
+            <p>이 p 태그는 div태그의 child입니다.</p>
+        </div>  
+        <div class="test3">
+            <p>이 p 태그는 div태그의 child입니다.</p>
+            <p>이 p 태그는 div태그의 child입니다.</p>
+            <p>이 p 태그는 div태그의 child입니다.</p>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="test4">
+        <p>이 p 태그는 div태그의 1번째 child입니다. 뒤에서 6번째</p>
+        <p>이 p 태그는 div태그의 2번째 child입니다. 뒤에서 5번째</p>
+        <p>이 p 태그는 div태그의 3번째 child입니다. 뒤에서 4번째</p>
+        <p>이 p 태그는 div태그의 4번째 child입니다. 뒤에서 3번째</p>
+        <p>이 p 태그는 div태그의 5번째 child입니다. 뒤에서 2번째</p>
+        <p>이 p 태그는 div태그의 6번째 child입니다. 뒤에서 1번째</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02_active.html</title>
+</head>
+<body>
+    <!-- 
+        HTML : 뼈대를 만드는 언어
+        구조를 만들기도 필요한 기능이 자주사용될 경우 경우 태그화 한 언어
+
+        CSS : 꾸밈 언어
+
+        JavaScript : 웹페이지상에서 발생하는 이벤트(사건) 정의
+                    이벤트(사건)이 발생하면 ! 기능을 작동시켜주는 언어
+    -->
+
+
+    <!-- HTML 태그중에서 자바스크립트처럼 기능이 포함되어있는 태그 있습니다. -->
+
+    <!-- 링크 태그 <a> : 
+        현재 웹페이지에서 다른 페이지나 다른 사이트로 연결해주는 태그
+    -->
+    <!-- 이동할 주소를 작성 : href 라는 속성 (*필수)-->
+    <!-- anchor : 정박지-->
+    <a href="이동할 정보">HTML 설명 </a> <br/>
+    <a href="https://www.naver.com">네이버 이동</a>
+
+    <!--
+        target 속성 : 링크로 연결된 페이지를 보여줄 방법
+        _blank : 새탭 오픈
+        _self : 내 프레임에서 오픈 * 기본값
+    -->
+    <br/>
+    <a href="https://www.google.com"> 구글이동 </a> <br/>
+    <a href="https://www.daum.net" target="_blank"> 다음이동 </a> <br/>
+    <a href="#">클릭이벤트</a> <br/>
+    <!-- 
+        간단하게 클릭인벤트의 형태를 보여줘야할때 사용하는 방법
+        href='#' 이동하는 경로를 무효화시켜놓고 클릭이벤트 활성화시킨형태
+        (*) 회사마다 사용하는 방법이 다릅니다. 편법
+    -->
+    클릭이벤트 <br/>
+
+    <!-- img : 이미지 태그
+        *필수속성 2가지
+        src : 이미지 주소 작성 (불러올 사진의 주소)
+        alt : 이미지를 불러올때 실패했을때 대체할 문자열
+            + 시각장애인분들에게 사진을 읽어줄때 사용하는 설명문
+    -->
+    <img src="test.jpg" alt="이미지가 없습니다." title="설명" /> <!-- 빈태그 입니다-->
+    <br/>
+    
+    <img src="https://img1.daumcdn.net/thumb/S308x188a.q80/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fsection%2Foc%2Fa53b64da78964331a07850b11de29f01" alt="이미지가 없습니다." title="설명" /> <!-- 빈태그 입니다-->
+    <br/>
+    <a href="https://www.daum.net" target="_blank"> <img src="https://img1.daumcdn.net/thumb/S308x188a.q80/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fsection%2Foc%2Fa53b64da78964331a07850b11de29f01" alt="이미지가 없습니다." title="설명" /> 
+    </a> <br/>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+            border: 1px solid black;
+            width: 90px;
+        }
+        .container{
+            /* 
+            flex : block과 비슷한 조건
+            inline-fles : inline-block과 비슷한 조건
+             */
+            /* display: flex; */
+            display: inline-flex;
+            height: 50px;
+            width: 200px;
+
+            /* 
+            배치 방법
+                row : 좌에서 우로
+                row-reverse : 우에서 좌로
+                column : 좌측상단 기준 위에서 아래로
+                column : 좌측상단 기준 아래에서 위로
+            */
+
+            /* flex-direction: row; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            
+            /* 
+            줄넘김 처리 설정 
+                플렉스 컨테이너의 줄에서 넘칠경우 배치 방법
+
+                flex-wrap: nowrap : 줄에서 넘칠 경우 그대로 넘침
+                flex-wrap: wrap : 넘칠 경우 아래로 배치해줌
+                flex-wrap: wrap-reverse : 넘칠 경우 위로 배치해줌(역순)
+            */
+
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* 
+            배치와 줄넘김 동시처리
+                flex-flow: column wrap 
+            */
+
+            flex-flow: column wrap;
+
+            /* 
+            메인
+            */
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">helloflex1</div>
+        <div class="item">abc2</div>
+        <div class="item">helloflex3</div>
+        <div class="item">helloflex4</div>
+        <div class="item">helloflex5</div>
+        <div class="item">helloflex6</div>
+        <div class="item">helloflex7</div>
+    </div>
+
+</body>
+</html>

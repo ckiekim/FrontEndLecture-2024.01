@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>로그인 정보</legend>
+            <ol>
+                <li>
+                    아이디 <input type="text" required>
+                </li>
+                <li>
+                    비밀번호 <input type="password" required>
+                </li>
+                <li>
+                    비밀번호 확인 <input type="password" required>
+                </li>
+                <li>
+                    회원 등급 <input type="text" value="준회원" readonly>
+                </li>
+        </fieldset>
+        <fieldset>
+            <legend>개인정보</legend>
+            <ol>
+                <li>
+                    이름 <input type="text" name="patternvalue" placeholder="5자미만 공백없이">
+                </li>
+                <li>
+                    메일 주소 <input type="email" placeholder="asdasd@saddas.com">
+                </li>
+                <li>
+                    연락처 <input type="text" pattern="(010|011)-\d{3,4}-\d{4}"><br/>
+                </li>
+                <li>
+                    생일 <input type="date">
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>코딩 숙련도(상,중,하)</legend>
+            <ol>
+                <li>
+                    <input type="range" id="temp"  list="a" />
+                    <label for="temp"></label>
+    
+                    <datalist id="a">
+                    <option value="20"></option>
+                    <option value="50"></option>
+                    <option value="80"></option>
+                    </datalist>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex05_form</title>
+</head>
+<body>
+    <!-- 
+        form 태그
+         input 태그를 이용하여 사용자에게 입력받은(담긴) 값을
+         서버로 데이터를 전달하도록 도와주는 포장태그
+         필수 속성 : method / action
+         method : 서버와의 통신 약속을 정하는 속성( 데이터 전달 방식 )
+         action : 전송할때 이동해야하는 페이지명( a href 와 같은 기능 )
+
+        입력이 끝났고, 전달하겠다 라는 사건(이벤트)
+        > 이벤트를 만들기위해서 보통 버튼 태그 사용
+
+        form 태그의 입력값과 버튼의 이벤트를 만들어서 
+            서버에게 전달, 데이터를 전송
+        데이터를 전송하는 기능 > submit 
+        input type="submit" 
+            : form태그의 데이터를 서버로 전송하는 기능을 가진 버튼
+    -->
+    
+    No-Form : <input type="text" placeholder="아이디.."> <br/>
+    <input type="button" value="일반버튼"/>
+    <input type="submit" value="제출버튼"/>
+    <input type="reset" value="초기화버튼"/>
+    <hr/><br/>
+
+    <form id="myform" action="#">
+        Form : <input type="text" placeholder="아이디.."> <br/>
+        메일1 : <input type="text" id="email"><br/>
+        메일2 : <input type="email" ><br/>
+        정규식(핸드폰)* : <input type="text" pattern="(010|011)-\d{3,4}-\d{4}"><br/>
+        
+        <input type="button" value="일반버튼" id="btn"/>
+        <input type="submit" value="제출버튼"/>
+        <input type="reset" value="초기화버튼"/>
+
+    </form>
+
+    <!-- script 태그 : 해당 시작태그와 종료태그 사이은 javascript가 작성되는 공간-->
+    <script>
+        // 자바스크립트 구현 공간
+        document.querySelector("#btn").addEventListener("click",function(){
+            alert('안녕하세요');
+        })
+    </script>
+
+    <script>
+        // 자바스크립트
+        document.querySelector("#myform").addEventListener("submit", function(e){ 
+
+        var email = document.querySelector("#email");
+        var isValidate = false;
+        var regexp =/[a-z]+[a-z0-9]*\.?[a-z0-9]*@[a-z0-9]+\.?[a-z0-9]*/i;
+
+        if(!regexp.test(email.value)){
+            alert("이메일 형식이 다릅니다.");
+        }
+
+        });
+    </script>
+</body>
+</html>

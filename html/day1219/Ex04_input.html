@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04_input</title>
+</head>
+<body>
+    <!--
+        input : 사용자(클라이언트)가 값을 입력할수있도록 도와주는 태그
+
+        입력의 종류가 많기때문에 "type" 속성이 필수
+        type="text" 기본값
+        type="속성" : 다양한 모양을 구현
+            (*빈태그)
+    -->
+     
+    이름 : <input/> <br/>
+    별명 : <input type="text"/> <br/>
+    비밀번호 : <input type="password"/> <br/>
+    <hr/>
+
+    <!--
+        checkbox : 다중 항목을 다중 선택 (동의서)
+        radio : 다중 항목중에 단일 선택 (성별, mbti)
+    -->
+    <input type="checkbox"/> <input type="radio"/> <br/>
+    <hr/>
+    
+    <!-- name 속성 : radio 타입에서만 같은 그룹임을 표시하는 속성-->
+    성별 : <input type="radio" name="gender"/> 남성
+            <input type="radio" name="gender"/> 여성
+            <br/>
+    <!-- name 속성 : radio 타입에서만 같은 그룹임을 표시하는 속성-->
+    체크 : <input type="checkbox" name="chk" /> 체크1
+        <input type="checkbox" name="chk" /> 체크2
+    
+    <!-- label 태그 : input태그와 문자를 연결해주는 태그
+        input태그 : cehckbox, radio, text....
+        input태그의 설명 : 성별(남성,여성..), 이름 등등
+    
+    * 연결방법
+    < input id = ""/>
+    < label for= ""> 내용 </label>
+    input 태그의 id 속성값과 label 태그의 for 속성값이 동일하면 연결
+    * id의 속성값은 태그별로 유일한 값으로 작성하는 것을 권장
+    * label 태그의 내용을 누르면(선택하면) input태그가 선택된것처럼 행동
+    -->
+    <br/>
+    <hr/>
+    성별 : <input type="radio" name="gender" id="greater1"/> 
+            <label for="greater1">남성</label>
+            <input type="radio" name="gender" id="greater2"/> 
+            <label for="greater2">여성</label>
+    <br/>
+    <hr/>
+    <input type="color"/> <br/>
+    날짜 : <input type="date" value="2023-12-19"
+                min="2023-12-18" max="2023-12-25"/> <br/>
+    범위 : <input type="range" min="0" max="5" value="2"> <br/>
+    숫자 : <input type="number" step="10" min="0"/> <br/>
+    힌트 : <input type="text" placeholder="아이디를 입력해주세요"/> <br>
+    오토포커스 : <input type="text" autofocus> <br/>
+    <input type="checkbox"checked/> <input type="radio"/> <br/>
+    <input type="checkbox"/> <input type="radio"checked/> <br/>
+    
+    정규식(핸드폰)* : <input type="text" pattern="(010|011)-\d{3,4}-\d{4}"><br/>
+    <!-- pattern 현재 기능이 구현되지 않은 형태-->
+    
+    <button>버튼1</button>
+    <input type="button" value="버튼2"/>
+
+</body>
+</html>

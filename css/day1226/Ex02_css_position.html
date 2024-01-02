@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            position : 위치를 선정하는 속성
+
+            1. 정적위치 : 태그들의 기본값
+            - 단순하게 웹페이지의 흐름대로 차례대로 요소를 배치하는 방식
+            position : static
+            - top right botton left 속성값을 영향 받지 않습니다.
+
+            2. 상대위치
+            - 태그의 정적위치(static)를 대상으로 위치를 재설정하는 방식
+            pcsition : relative
+            - top right bottom left 속성값 영향을 받음
+            - 상대위치를 변경하더라도 정적위치(원래위치)는 유지가 됩니다. 다른요소가 못들어옴
+
+            3. 고정위치
+            - 위치를 항상 같은 곳에 위치하는 방식
+            position : fixed
+
+            4. 절대위치
+            - 자신의 상위태그의 위치에 따라서 고정위치를 설정하는 방법
+            - 상위태그가 <body>라면 body태그를 기준으로 위치를 설정
+            - 내 상위태그가 다른 태그면 그 태그의 기준으로 위치설정
+            * 상위태그는 항상 static으로 설정되어있으면 안됩니다. ( <bodt> 예외)
+        */
+
+        .static{
+            position: static;
+            border: 2px solid red;
+            top: 50px;
+            left: 30px;
+        }
+        
+        .relative{
+            position: relative;
+            border: 2px solid blue;
+            top: 30px;
+            left: 50px;
+            
+            /* 11번가 눈 */
+            
+        }
+
+        .fixed{
+            border: 2px solid darkgreen;
+            position: fixed;
+            top: 90%;
+            right: 0px;
+            /* 카카오톡 고정 */
+        }
+        .relative2{
+            border: 2px solid darkorange;
+            position: relative;
+            width: 500px;
+        }
+        .absolute{
+            border: 2px solid teal;
+            position: absolute;
+            top: 50px;
+            right: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> 위치 지정 테스트 </h1>
+    <div class="static">이 요소는 정적위치(static) 입니다.</div>
+    <div class="relative">이 요소는 상대위치(relative) 입니다.</div>
+    <h4>상대위치는 html 요소의 정적위치를 대상으로 위치를 재조정하는 방식</h4>
+    <div class="fixed">이 요소는 고정위치입니다.</div> 
+    <h4>고정위치는 위치를 항상 같은 곳에 위치하는  방식</h4>
+
+    <div class="relative2">
+        상대위치를 설정한 태그는
+        <div class="absolute">
+            이 요소는 절대위치입니다1
+            상위태그(부모)요소에 따라 위치를 재조정하는 방식 ( 부모요소 = div )
+        </div>
+    </div>
+
+    <div class="absolute">
+        이 요소는 절대위치입니다2
+        상위태그(부모)요소에 따라 위치를 재조정하는 방식 ( 부모요소 = body )
+    </div>
+</body>
+</html>

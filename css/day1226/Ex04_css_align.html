@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 1px solid red;
+            padding: 20px;
+        }
+        .margin{
+            margin: auto;
+            width: max-content;
+            /* width: max-content : 내용의 크기만큼 */
+        }
+        .position1{
+            width: 180px;
+            margin: 0;
+            position: absolute; /* fixed 무관*/
+        }
+        .position2{
+            width: 180px;
+            margin: 0;
+            position: absolute; /* fixed 무관*/
+            right: 0px;
+        }
+        
+        .float_left{
+            float: left;
+        }
+        .float_right{
+            float: right;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="margin">
+        margin 통해서 정렬<br>
+        수평으로 가운데 정렬 !
+    </div>
+
+    <div class="position1">
+        position 통해서 정렬
+    </div>
+    <div class="position2">
+        position 통해서 정렬
+    </div>
+    <br><br>
+    <div class="float_left">
+        float 통해서 정렬
+    </div>
+    <div class="float_right">
+        float 통해서 정렬
+    </div>
+</body>
+</html>

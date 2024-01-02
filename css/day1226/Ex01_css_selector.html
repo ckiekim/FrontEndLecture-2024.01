@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            모든 태그는 display 속성을 가지고있고
+            박스형 형태 (box model)입니다.
+            * margin > border > padding > content
+            * 높이와 너비가 존재 (height 와 width)
+            * 높이와 너비에 따라 박스형의 태그들이 웹페이지(웹브라우저)상에 배치
+
+            display 속성
+            블록 : display : block
+            - 언제나 새로운 라인에서 시작
+            - 너비(가로) 모든 라인을 차지 (*부모의 너비만큼)
+
+            인라인 : display : inline
+            - 현재라인에서 시작
+            - 너비(가로) 내용(content)만큼 차지
+
+            태그별로 기본 설정값으로 되어있는 display 속성이 있는데
+            display의 값을 바꾼다면 ? 
+            블록 > 인라인 : 인라인태그의 속성으로 변경됨
+            인라인 > 블록 : 블록태그의 속성으로 변경
+
+            너비와 높이 : 블록태그의 설정 / 인라인태그설정(불안정합니다)
+            너비 : 블록태그는 자동으로 전체만큼 너비 차지
+                    인라인태그는 내용만큼만 너비 차지
+
+            inline-block : 라인을 차지하는 행동은 inline처럼
+                            크기와 너비,높이, 마진등... 설정하는 행동은 block처럼
+
+            * 블록태그 : 태그들을 감싸는 태그 (시작태그와 종료태그로 다른태그들을 감싼형태로 사용)
+            * 인라인태그 : 내용을 감싸는 태그
+            * 주의 ! 인라인태그 안에 블록태그를 쓰면 안됩니다.
+            * 속성을 변경한 상태라면 ? 
+            * > 안됩니다. 태그의 기본속성이 중요!
+            * <span> : 인라인 태그 안에서 태그를 써야할 경우 사용하는 태그
+
+            <div> <span>
+            <div> <p>
+            <p> <div>
+            <span> <div> 문제발생
+            <span> <span>
+
+        */
+
+        div{
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        .first{
+            background-color: cadetblue;
+        }
+
+        .second{
+            background-color: chartreuse;
+        }
+
+        .third{
+            background-color: crimson;
+        }
+
+        .inline{
+            display: inline;
+        }
+        
+        .inline-block{
+            display: inline-block
+        }
+
+         /* display : none 
+            - 요소(태그)를 숨기는 속성, 눈에도 안보이고 레이아웃상에도 없는
+        */
+        .display{
+            display: none;
+        }
+
+        /* 
+            visibility: hidden
+            - 요소(태그)를 숨기는 속성, 눈에는 안보이고 레이아웃상에서는 존재
+        */
+        .visibility{
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>display 속성 테스트</h1>
+
+    <h3>display : block일때, 블록일때</h3>
+
+    <div class="first"> 블록 </div>
+    <div class="second"> 블록 </div>
+    <div class="third"> 블록 </div>
+    <br><br>
+    
+    <h3> display : inline 일때, 인라인일때 </h3>
+    <div class="first inline"> 블록 </div>
+    <div class="second inline"> 블록 </div>
+    <div class="third inline"> 블록 </div>
+    <br><br>
+
+    
+    <h3> display : inline-block 일때, 인라인블록일때 </h3>
+    <div class="first inline-block"> 블록 </div>
+    <div class="second inline-block"> 블록 </div>
+    <div class="third inline-block"> 블록 </div>
+
+    <div class="display">123123 </div>
+    <div class="visibility">123123 </div>
+
+    <div> 123 </div>
+
+</body>
+</html>

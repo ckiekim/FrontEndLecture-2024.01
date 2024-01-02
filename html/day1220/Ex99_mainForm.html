@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myform" action="#">
+        <fieldset>
+            <legend>회원 가입</legend>
+            <ol>
+                <li>이름 <input type="text" placeholder="이름"></li>
+                <li>성별 <input type="radio" name="gender" id="man">
+                    <label for="man">남성</label>
+                    <input type="radio" name="gender" id="girl">
+                    <label for="girl">여성</label>
+                </li>
+                <li>
+                    직업
+                    <select>
+                        <option selected>프로그래머</option>
+                        <option>학생</option>
+                        <option>선생</option>
+                    </select>
+                </li>
+                <li>취미
+                    <input type="checkbox" id="z">
+                    <label for="z">잠자기</label>
+                    <input type="checkbox" id="m">
+                    <label for="m">먹기</label>
+                    <input type="checkbox" id="s">
+                    <label for="s">숨쉬기</label>
+                    <input type="checkbox" id="m2">
+                    <label for="m2">멍때리기</label>
+                </li>
+                <li>애인 
+                    <input type="radio" name="gender" id="yes">
+                    <label for="yes">있다</label>
+                    <input type="radio" name="gender" id="no">
+                    <label for="no">없다</label>
+                </li>
+                <li>
+                    <input type="submit" value="확인">
+                    <input type="reset" value="취소">
+                </li>
+                <li>
+                    <textarea rows="5" cols="30"></textarea>
+                </li>
+                <li>
+                    빈값 : <input type="text" required>
+                </li>
+                <li>
+                    사이즈 : <input type="text" style="width: 600px;">
+                </li>
+                <li>
+                    초기값 : <input type="text" value="초기값">
+                </li>
+                <li>
+                    초기값 변경x : <input type="text" value="초기값" readonly>
+                </li>
+                <li>
+                    입력 한계 : <input type="text" maxlength="5">
+                </li>
+                <li>
+                    미사용 : <input type="text" disabled>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+</body>
+</html>

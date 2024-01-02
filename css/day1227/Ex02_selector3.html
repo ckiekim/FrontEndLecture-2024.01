@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            동위 선택자
+            : 형제요소(태그), 같은 부모 내의 요소(태그)를 가지고 있는 요소(태그)
+            sibling(형제)
+            * 기준요소보다 항상 뒤에 존재해야하는 요소만 형제로 선택
+
+            일반 동위 선택자 : 기준요소와 동위요소를 찾는 선택자, ~ 으로 구분
+                            기준요소의 형제 요소 선택
+                            
+            div ~ p : div태그의 형제중 p 태그를 선택
+
+
+            인접 동위 선택자 : 기존요소와 "바로뒤에" 동위요소를 찾는 선택자, + 으로 구분
+                            기준요소의 "바로뒤에" 형제 요소 선택
+
+            div + p : div태그의 형제중 "바로뒤에" p태그를 선택
+
+
+        */
+
+        div{
+            border: 2px solid darksalmon;
+        }
+        div ~ p{
+            /* 
+                div태그(기준) 와 같은 부모를 가진 형제 요소(p태그)중에
+                div태그(기준)보다 "뒤"에 존재하는 형제요소
+            */
+            background-color: cornflowerblue;
+        }
+
+        div + p{
+            font-style: italic;
+            text-decoration: underline;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+
+    <h1>동위선택자</h1>
+    <p>이 p0 태그는 div의 형제(sibling)요소이지만 div보다 앞에 작성</p>
+    <p>이 p0 태그는 div의 형제(sibling)요소이지만 div보다 앞에 작성</p>
+    <div>
+        <p>이 p1 태그는 div태그의 자식(child)이면서 형제(sibling)요소이지만 div보다 앞에 작성</p>
+        <div>
+            <p>이 p2 태그는 div태그의 자식(child)</p>
+        </div>
+        <p>이 p3 태그는 div태그의 자식(child)이면서 "바로 뒤에" 형제(sibling)요소입니다.</p>
+        <p>이 p4 태그는 div태그의 자식(child)이면서 "뒤에" 형제(sibling)요소입니다.</p>
+    </div>
+    <p>이 p5 태그는 div태그의 "바로 뒤에" 나오는 형제(sibling)요소입니다.</p>
+    <p>이 p6 태그는 div태그의 "뒤에" 나오는 형제(sibling)요소입니다.</p>
+
+</body>
+</html>

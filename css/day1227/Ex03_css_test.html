@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            red / orange / yellow / green / blue / navy / purple
+
+            태그로만 자식( > ) 자손(" ") 일반동위( ~ ) 인접동위( + ) 선택자를 구성 
+            id, class 주셔서 작업, 우선순위를 통해서
+        */
+        /* 
+            모든 요소들의 기준점인 태그를 만드는 이유
+                >내가 관리하기 위해서, 편하게 하기위해서
+        */
+        div p{
+            color: red;
+        }
+        div div p{
+            color: orange;
+        }
+        div div div p{
+            color: yellow;
+        }
+        div + span{
+            color: green;
+        }
+        div span ~ div p{
+            color: blue;
+        }
+        div div span + div ~ p{
+            color: navy;
+        }
+        span ~ div div p{
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="txt3">
+        <p>자식1</p>
+        <div class="txt3_1">
+            <p>손자1</p>
+            <div>
+                <p>증손자1</p>
+            </div>
+            <span>손자2</span>
+            <div class="txt3_2">
+                <p>증손자2</p>
+            </div>
+            <p>자식2</p>
+            <div>
+                <div>
+                    <p>너는누구니?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

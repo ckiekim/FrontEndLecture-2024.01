@@ -1,0 +1,102 @@
+<!-- 
+    float : 떠있다, 뜨다.
+
+    기본적으로 HTML 구조를 정렬할때 하나의 큰 면에 레이아웃을 설정(*)
+    > 왼쪽상단기준으로 박스모델 정렬해나갔습니다.
+
+    float : 요소를 자연스럽게 만들어주는 옵션 > 레이아웃을 정렬할때 자주 사용
+
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            float:left;
+            /* 
+                이미지를 태그를 띄워라 > 왼쪽으로
+
+                띄운다 : 공간은 차지하는데 다른요소의 배치에 영향을 안주는 요소
+                다른 요소들과 다르게 붕 떠있다
+            */
+        }
+        .clear{
+            /* float 속성으로 인한 요소들의 흐름을 다시 원상복귀해주는 속성 */
+            clear: both;
+        }
+        #a{
+            border: 1px solid red;
+            float: right
+        }
+        #b{
+            border: 1px solid blue;
+            float: left;
+        }
+        
+        div.float2{
+            border: 2px solid springgreen;
+            padding: 10px;
+        }
+        div.left{
+            background-color:  tomato;
+            float: left;
+            width: 200px;
+            height: 50px;
+        }
+        div.right{
+            background-color:  goldenrod;
+            float: right;
+            width: 200px;
+            height: 50px;
+        }
+
+        h2{
+            clear: both;
+        }
+        .overflow{
+            overflow: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h2> float 연습 </h2>
+    <p>
+        <img src="test.jpg" alt="apple" width="100px" height="100px">
+        <img src="test.jpg" alt="apple" width="100px" height="100px">테스트 중입니다. 
+        ** 기본적으로 HTML 구조를 정렬할때 하나의 큰 면에 레이아웃을 설정하는 것
+        왼쪽 상단 기준으로 박스모델을 정렬해나감        
+        float : 요소를 자연스럽게 만들어주는 옵션이지만 레이아웃만들때 주로 사용
+    </p>
+
+    <!-- float 속성을 가진 요소가 있다면 항상 다음에 나오는 요소의 위치까지 영향을 줍니다. -->
+    <!-- 영향을 없애기위해서 사용하는 스타일 속성 : clear -->
+
+    <div class="clear"></div>
+    
+    <div id="a">Hello, Wolrd</div>
+    <div id="b">안녕, 세계</div>
+    <div>테스트ㄴㅁㅇㄴㅁㅇㄴㅁㅇㄴㅇㅁㅇㄴㅁㄴㅇㅁㄴㅇㅁㄴㅁㅇ</div>
+    <div class="clear"></div>
+
+    <h2> float 연습2 </h2>
+    <div class="float2">
+        <div class="float2 left">왼쪽 끝 요소</div>
+        <div class="float2 right">오른쪽 끝 요소</div>
+    </div>
+
+    <h2> 연습 끝 </h2>
+    <h1> overflow </h1>
+    <div class="float2"> 이미지와 이미지 설명 텍스트
+        <img src="test.jpg" alt="apple" width="100px" height="100px">
+    </div>
+    <p class="clear" ></p>
+    <div class="float2 overflow"> 이미지와 이미지 설명 텍스트
+        <img src="test.jpg" alt="apple" width="100px" height="100px">
+    </div>
+</body>
+</html>

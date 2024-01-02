@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex99_test</title>
+</head>
+<body>
+    <h1>Ex99_test파일</h1>
+
+    <script>
+        // submit.html 에서 넘겨준 이름을 저장하는 행위    
+        //  >> javascript로 구현을 해야합니다.
+
+        var urlParam = new URL(location.href).searchParams;
+        var name = urlParam.get('userName');
+        document.write("이름 : "+name + "<br/>");
+        var nick = urlParam.get('userNick');
+        document.write("별명 : "+nick + "<br/>");
+
+    </script>
+</body>
+</html>

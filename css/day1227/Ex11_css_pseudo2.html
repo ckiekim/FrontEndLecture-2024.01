@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            pseudo-class : 가상클래스, HTML 상태를 정의                 : 선택
+
+            pseudo-element : 가상요소선택자, HTML요소의 특정부분만 선택 :: 선택
+        */
+
+        p.p1::first-letter{
+            color: red;
+        }
+
+        p.p2::first-line{
+            background-color: tan;
+        }
+
+        p.p2::first-letter{
+            font-size: 30px;
+        }
+        /* input태그의 힌트를 의미하는 요소만 변경 */
+        input::placeholder{
+            color: magenta;
+            font-size: 20px
+        }
+
+        /* 
+            ::before
+            : 선언된 태그가 만들어지기 전에 바로 앞에 실행하는(만들어지는) 요소
+            기준요소의 컨텐츠가 시작부분에서 생성할 컨텐츠(content)를 추가
+            실제 태그(내용) 바로 앞에 생성되는 자식 요소
+
+            ::after
+            : 선언된 태그가 만들어진 후에 바로 뒤에 실행하는(만들어지는) 요소
+            기준요소의 컨텐츠가 끝부분에서 생성할 컨텐츠(content)를 추가
+            실제 태그(내용) 바로 뒤에 생성되는 자식 요소
+
+            content : 내용 속성, 가짜 속성
+                > HTML 문서상에 포함되는 요소를 새롭게 생성해주는 속성
+                > HTML 문서상에서는 없는 요소, CSS에서만 존재하는 가짜요소
+        */
+
+        p.p3::before{
+            content: "안녕하세요";
+            color: red;
+        }
+
+        .test li{
+            line-height: 3em;
+        }
+        /* 클래스가 test인 태그의 자식중에 li중에 a가 만들어지기 전 */
+        .test li a::before{
+            content: "맛있는";
+            width: 40px;
+            padding: 3px 6px;
+            margin: 0px 5px;
+            border-radius: 4px;
+            background-color: royalblue;
+            color: wheat;
+            text-align: center;
+        }
+        .test li{
+            list-style-type: none;
+        }
+
+        .test1 li{
+            list-style-type: none;
+            float: left;
+            margin-right: 10px;
+            padding: 5px;
+            background-color: thistle;
+        }
+
+        .test1::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* ---------------------------------- */
+
+        
+    </style>
+</head>
+<body>
+    <p class="p1"> 안녕하세요</p>
+    <p class="p2">
+        정부가 사적모임 인원을 4인으로 제한하고 식당·카페의 영업시간을 오후 9시까지로 하는 현행 사회적 거리두기를 2주간 연장하기로 했습니다.
+        김부겸 국무총리는 오늘(31일) 정부서울청사에서 주재한 코로나19 중앙재난안전대책본부(중대본) 회의에서 “무서운 전파력을 가진 오미크론 변이가 국내에서 본격 확산되기 전에, 선제적으로 대비하기 위해서는 시간이 필요하다”면서 "영업시간 제한, 사적모임 축소 등 현재의 사회적 거리두기를 2주간 더 연장한다"고 밝혔습니다.
+        대신 방역조치로 인한 소상공인과 자영업자의 피해를 보상하기 위해 내년 1분기 손실보상금 500만 원을 '선(先)지급 후(後)정산' 방식으로 지원하기로 했습니다.
+        김 총리는 "올해 4분기에 이어 내년 1분기에도 손실보상이 필요한 상황이다. 정부는 소상공인·자영업자의 아픔을 조금이라도 덜어드리고자 '선지급 후정산' 방식을 택하기로 했다"면서 “약 55만 명을 대상으로 신청을 받아 500만 원을 우선 지급하고, 추후 보상액이 확정되면 정산토록 하겠다"고 설명했습니다.
+        논란이 됐던 청소년 방역패스는 새 학기가 시작되는 3월 1일부터 적용하되, 한 달간의 계도기간을 두기로 했습니다.
+        김 총리는 또 "많은 사람으로 붐비는 백화점과 대형마트에 대해서는 방역패스를 의무화해 방역관리를 한층 강화한다"고 덧붙였습니다.
+    </p>
+    
+    <input type="text" placeholder="아이디를 입력하세요"/>
+    <br><hr><br>
+
+    <p class="p3">지금 이 태그가 기준태그입니다.</p> 
+
+    <br><hr><br>
+
+    <h1> 오늘 점심 메뉴 </h1>
+    <ul class="test">
+        <li><a href="#">일식</a></li>
+        <li><a href="#">중식</a></li>
+        <li><a href="#">한식</a></li>
+        <li><a href="#">양식</a></li>
+        <li><a href="#">잡식</a></li>
+    </ul>
+    
+
+    <ul class="test1">
+        <li><a href="#">login</a></li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">sitemap</a></li>        
+    </ul>
+
+    <p>테스트</p>
+
+    <br><br><hr><br><br>
+
+    <style>
+        .sideMenu{
+            border: 2px solid gray;
+            width: 500px;
+            height: 50px;
+        }
+        .sideMenu li{
+            list-style-type: none;
+            float: left;
+            padding: 15px 20px;
+            }
+        .sideMenu li::after{
+            content: "|";
+            color: gray;
+            /* margin-left: 23px; */ /* ul 태그의 크기를 조절해주세요*/
+            margin-right: -23px;
+            float: right;
+            /* 
+            after만든 가상요소를 float를 해서 화면상에서 띄우기
+            화면상에서 띄어져있기때문에 + 이동도 가능 - 이동가능 
+             */
+        }
+
+        .sideMenu li:last-of-type::after{
+            content:"";
+        }
+        .sideMenu::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+    <ul class="sideMenu">
+        <li>로그인</li>
+        <li>회원가입</li>
+        <li>마이페이지</li>
+        <li>사이트맵</li>
+    </ul>
+
+    <p>테스트</p>
+</body>
+</html>

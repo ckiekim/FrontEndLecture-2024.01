@@ -1,0 +1,10 @@
+<svg width="88" height="38" viewBox="0 0 88 38" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient x1="0%" y1="40.651%" x2="100%" y2="59.349%" id="fvt754issa">
+            <stop stop-color="#FF5A2E" offset="0%"/>
+            <stop stop-color="#FF0038" offset="51.956%"/>
+            <stop stop-color="#FF00EF" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <path d="M10.253 0 0 8.078v4.519h4.496L9.48 8.69v28.565l.742.744h4.834l.739-.745V.745L15.052 0 10.253 0zm58.72 0H48.116l-.74.746v4.858l.741.743h18.242L78.948 19l-12.59 12.654H37.903V.744L37.16.002 32.36 0 22.11 8.078v4.519h4.495l4.984-3.906v28.565l.73.732.012.012h36.644l18.904-19L68.974 0z" fill="url(#fvt754issa)" fill-rule="evenodd"/>
+</svg>
