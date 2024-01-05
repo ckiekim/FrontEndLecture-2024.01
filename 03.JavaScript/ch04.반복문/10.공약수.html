@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공약수 구하기</title>
+    <script>
+        function getCommonDivisors() {
+            let num1 = Number(document.getElementById('num1').value);
+            let num2 = Number(document.getElementById('num2').value);
+            let commonDivisors = [];
+            for (let i = 1; i <= Math.min(num1, num2); i++) {
+                if (num1 % i == 0 && num2 % i == 0)
+                    commonDivisors.push(i);
+            }
+            let resultTag = document.getElementById('result');
+            resultTag.innerHTML = `${num1}, ${num2}의 공약수는 ${commonDivisors}`;
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h3>공약수 구하기</h3>
+    <hr>
+    <input type="text" id="num1" placeholder="양의 정수를 입력하세요.">
+    <input type="text" id="num2" placeholder="양의 정수를 입력하세요.">
+    <button onclick="getCommonDivisors()">확인</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
