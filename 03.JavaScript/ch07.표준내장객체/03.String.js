@@ -2,7 +2,7 @@
 
 let hello = '안녕하세요?';
 
-/* // 속성
+// 속성
 console.log(hello.length);
 
 // 메소드(method)
@@ -66,7 +66,7 @@ let spe = str.replace(/[^-=]/g, '');        // -, = 특수기호만 남기고 �
 console.log(eng);
 console.log(kor);
 console.log(num);
-console.log(spe);    */
+console.log(spe);   
 
 // 문자열 찾기
 console.log(hello.indexOf('안녕'));     // 결과값이 0 이상이면 찾는 문자열이 있음
