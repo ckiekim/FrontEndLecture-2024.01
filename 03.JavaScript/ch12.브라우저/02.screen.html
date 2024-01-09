@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen 객체</title>
+    <script>
+        window.onload = function() {        // body 내용을 다 표시(rendering)한 후 실행
+            let attr = `width: ${screen.width}<br>`;
+            attr += `height: ${screen.height}<br>`;
+            attr += `availWidth: ${screen.availWidth}<br>`;
+            attr += `availHeight: ${screen.availHeight}<br>`;
+            attr += `colorDepth: ${screen.colorDepth}<br>`;
+            attr += `pixelDepth: ${screen.pixelDepth}<br>`;
+            document.getElementById('info').innerHTML = attr;
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h3 id="info"></h3>
+</body>
+</html>

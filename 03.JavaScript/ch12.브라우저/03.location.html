@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location/History 객체</title>
+    <script>
+        function delayedMove() {
+            let waitTag = document.getElementById('wait');
+            waitTag.setAttribute('src', 'please-wait.gif');
+            setTimeout(() => {
+                location.href = 'https://www.hanbit.co.kr/academy/';
+            }, 3000);
+        }
+        function displayInfo() {
+            let attr = `href: ${location.href}<br>`;
+            attr += `hostname: ${location.hostname}<br>`;
+            attr += `port: ${location.port}<br>`;
+            attr += `pathname: ${location.pathname}<br>`;
+            document.getElementById('info').innerHTML = attr;
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <button onclick="location.href='https://www.hanbit.co.kr/academy/'">사이트 이동</button>
+    <button onclick="delayedMove()">사이트 지연 이동</button>
+    <button onclick="history.forward()">앞으로</button>
+    <button onclick="history.back()">뒤로</button>
+    <button onclick="displayInfo()">정보 표시</button>
+    <hr>
+    <h4 id="info"></h4>
+    <img id="wait" src="" alt="">
+</body>
+</html>
