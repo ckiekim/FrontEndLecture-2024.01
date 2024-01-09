@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성</title>
+    <style>
+        .class1 { color: blue; }
+        .class2 { background-color: azure; }
+    </style>
+    <script>
+        var count = 1;
+        function addNode() {
+            const h3 = document.createElement('h3');
+            h3.classList.add('class1', 'class2');       // class="class1 class2"
+            /* const textNode = document.createTextNode('홍길동');
+            h3.appendChild(textNode); */
+            h3.innerHTML = '홍길동' + count++;
+            document.getElementById('point').prepend(h3);       // 앞에 추가
+            // document.getElementById('point').append(h3);     // 뒤에 추가
+        }
+        function removeNode() {
+            const h3 = document.querySelector('.class1.class2');
+            document.getElementById('point').removeChild(h3);
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h3>당신의 이름은 무엇입니까?</h3>
+    <button onclick="addNode()">추가</button>
+    <button onclick="removeNode()">삭제</button>
+    <hr>
+    <div id="point"></div>
+    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+</body>
+</html>

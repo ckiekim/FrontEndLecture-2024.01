@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event 처리</title>
+    <script>
+        function btn2click() {
+            alert('버튼 2가 클릭되었음.');
+        }
+        window.onload = function() {
+            const btn3 = document.getElementById('btn3');
+            btn3.onclick = function() {
+                alert('버튼 3이 클릭되었음.');
+            }
+
+            // btn4: 클릭, 마우스 오버, 마우스 아웃 이벤트 등록
+            const btn4 = document.getElementById('btn4');
+            btn4.addEventListener('click', () => {
+                alert('버튼 4가 클릭되었음.');
+            });
+            btn4.onmouseover = function() {
+                const h3 = document.createElement('h3');
+                h3.innerHTML = '마우스 오버 이벤트 발생';
+                document.body.appendChild(h3);
+            }
+            btn4.onmouseout = function() {
+                const h3 = document.querySelector('h3');
+                document.body.removeChild(h3);
+            }
+
+            // btn5: 마우스 오버, 마우스 아웃 이벤트 등록
+            const btn5 = document.getElementById('btn5');
+            btn5.addEventListener('mouseover', () => {
+                const img = document.createElement('img');
+                img.src = 'img/github.jpeg';
+                img.width = 300;
+                document.body.appendChild(img);
+            });
+            btn5.addEventListener('mouseout', () => {
+                const img = document.querySelector('img');
+                document.body.removeChild(img);
+            });
+
+            // btn6: a 태그의 기본 이벤트 처리를 제거
+            const btn6 = document.getElementById('btn6');
+            btn6.onclick = function() {
+                alert('a 태그의 기본 이벤트 처리를 제거하였음');
+                const a = document.querySelector('a');
+                a.onclick = function() {
+                    return false;           // 기본 이벤트 처리 제거
+                }
+            }
+
+            // btn7: input 태그의 내용을 result 태그에 출력
+            const btn7 = document.getElementById('btn7');
+            btn7.onclick = function() {
+                let name = document.getElementById('name').value;
+                document.getElementById('result').innerHTML = name;
+            }
+
+            const input = document.getElementById('name');
+            input.onkeyup = function() {
+                let name = document.getElementById('name').value;
+                document.getElementById('result').innerHTML = name;
+            }
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <button onclick="alert('버튼 1이 클릭되었음.')">버튼 1</button>
+    <button onclick="btn2click()">버튼 2</button>
+    <button id="btn3">버튼 3</button>
+    <br><br>
+    <button id="btn4">버튼 4</button>
+    <button id="btn5">버튼 5</button>
+    <br><br>
+    <button id="btn6">버튼 6</button>
+    <a href="https://www.hanbit.co.kr/academy/">한빛아카데미</a>
+    <br><br>
+    <input type="text" id="name">
+    <button id="btn7">버튼 7</button>
+    <span id="result"></span>
+    <hr>
+</body>
+</html>

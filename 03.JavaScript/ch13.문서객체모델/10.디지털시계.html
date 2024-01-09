@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 시계</title>
+    <script>
+        function twoDigit(num) {
+            return (num < 10) ? '0' + num : String(num);        // 4 --> '04', 23 --> '23'
+        }
+        function myDateTime(date) {
+            return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} ` +
+                `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
+        }
+        window.onload = function() {
+            setInterval(function() {
+                const now = new Date();
+                const week = '일월화수목금토'.split('');        // ['일', ..., '토']
+                let dateStr = myDateTime(now).substring(2, 10);
+                dateStr += '(' + week[now.getDay()] +')';
+                const timeStr = myDateTime(now).substring(11);
+                document.getElementById('date').innerHTML = dateStr;
+                document.getElementById('time').innerHTML = timeStr;
+            }, 1000);
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h2 id="date"></h2>
+    <br>
+    <h1 id="time"></h1>
+</body>
+</html>
