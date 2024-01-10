@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 맛보기</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        window.onload = function() {
+            const js = document.getElementById('js');
+            js.innerHTML = '자바스크립트가 동적으로 생성';
+            js.style.backgroundColor = 'yellow';
+            js.style.fontSize = '30px';
+            js.style.color = 'red';
+
+            jQuery('#jq').text('jQuery가 동적으로 생성');
+            jQuery('#jq').css('backgroundColor', 'beige')
+                         .css('fontSize', '30px')
+                         .css('color', 'blue');
+
+            // jQuery를 사용하는 일반적인 형태, "write less, do more"
+            $('#jq2').text('jQuery가 축약해서 동적으로 생성')
+                     .css('backgroundColor', 'cyan')
+                     .css('fontSize', '30px')
+                     .css('color', 'violet');
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <div id="js"></div>
+    <div id="jq"></div>
+    <div id="jq2"></div>
+</body>
+</html>

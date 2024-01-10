@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 스타일 조작</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('#first').text('css를 개별적으로 적용')
+                       .css('backgroundColor', 'yellow')
+                       .css('color', 'red');
+            $('#second').text('css를 오브젝트 형태로 적용')
+                        .css({ backgroundColor: 'beige', color: 'blue' });
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h1 id="first">First Header</h1>
+    <h1 id="second">Second Header</h1>
+    <h1>Third Header</h1>
+</body>
+</html>

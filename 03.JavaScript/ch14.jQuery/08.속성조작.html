@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 속성 조작</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('img').attr('src', 'https://picsum.photos/640/360')
+                    .attr('width', '320px');
+            for (let i = 0; i < 4; i++) {
+                $('<img></img>').css('margin', '5px')
+                        .attr('src', 'https://picsum.photos/200/200?q=' + i)    // url을 변경해야 그림이 바뀜
+                        .appendTo('body');
+            }
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    <img>
+    <hr>
+</body>
+</html>
