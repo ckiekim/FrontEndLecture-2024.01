@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 애니메이션</title>
+    <style>
+        .box {
+            width: 100px; height: 100px; background-color: red;
+            position: absolute; left: 50px; top: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('.box').click(function(e) {
+                $(this).animate({ left: 800, top: 500 }, 1000, function() {
+                    $('p').text('이동 완료');
+                })
+            });
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    <div class="box"></div>
+    <p></p>
+</body>
+</html>

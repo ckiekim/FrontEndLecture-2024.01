@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 키보드 이벤트</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            $('input')
+                .on('keyup', function(e) {
+                    $('#keyup').text($(this).val());    // 글자를 입력할 때마다
+                })
+                .on('change', function(e) {
+                    $('#change').text($(this).val());   // 엔터키를 쳤을때
+                })
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    입력: <input type="text">
+    <hr>
+    <div>
+        글자를 입력할 때마다 어떤 글자가 입력되었는지:
+        <span id="keyup"></span>
+    </div>
+    <div>
+        글자를 입력하고 엔터키를 쳤을때:
+        <span id="change"></span>
+    </div>
+</body>
+</html>

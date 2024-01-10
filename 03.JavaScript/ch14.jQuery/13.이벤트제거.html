@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 이벤트 제거</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            const handler = function(e) {
+                // 새로 만든 태그에 이벤트 추가
+                $('<h1></h1>')
+                    .text($(this).text())
+                    .on('click', handler)
+                    .appendTo('body');
+                // 기존 태그에서는 이벤트 제거
+                $(this).off('click');
+            }
+            $('h1').click(handler);
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h1>새로 만든 줄에서만 이벤트 처리 가능</h1>
+</body>
+</html>

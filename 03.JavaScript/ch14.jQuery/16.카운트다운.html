@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운트 다운</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        var count = 3;
+        function disp(num) {
+            $('<img></img>')
+                .attr('src', `../ch13.문서객체모델/img/${num}.svg`)
+                .attr('width', 500)
+                .attr('id', 'second')
+                .css('margin', '30px')
+                .appendTo($('#show'))
+        }
+        function hide() {
+            $('#second').remove();
+        }
+        $(document).ready(() => {
+            disp(count--);
+            let si = setInterval(function() {
+                hide();
+                if (count != 0)
+                    disp(count--);
+                else {
+                    $('<h3></h3>')
+                        .text(`결과는 ${Math.ceil(Math.random() * 6)} 입니다.`)
+                        .appendTo($('#show'));
+                }
+            }, 1000);
+            setTimeout(() => {
+                clearInterval(si);
+            }, 3100);
+        });
+    </script>
+</head>
+<body style="margin: 50px;">
+    <h1>3초 후에 결과 보여주기</h1>
+    <hr>
+    <div id="show"></div>
+</body>
+</html>
