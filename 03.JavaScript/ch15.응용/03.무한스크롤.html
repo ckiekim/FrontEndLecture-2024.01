@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 스크롤</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(() => {
+            const appendDocument = () => {
+                for (let i=0; i<20; i++)
+                    $('<h1></h1>').text('무한 스크롤').appendTo('body');
+            }
+            appendDocument();
+
+            $(window).scroll(function(e) {
+                let scrollHeight = $(window).scrollTop() + $(window).height();
+                let documentHeight = $(document).height();
+                if (scrollHeight == documentHeight)
+                    appendDocument();
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
