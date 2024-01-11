@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fdb840a8cc.js" crossorigin="anonymous"></script>
+	<style>
+		* { font-family: 'Noto Sans KR', sans-serif; }
+		a { text-decoration: none; }
+	</style>	
+</head>
+<body>
+  <div class="container-fluid p-3 bg-primary text-white text-center">
+    <h1>부트스트랩 페이지</h1>
+    <p>뱃지</p> 
+  </div>
+    
+  <div class="container mt-3">
+    <h2>Contextual Badges</h2>
+    <span class="badge bg-primary">Primary</span>
+    <span class="badge bg-secondary">Secondary</span>
+    <span class="badge bg-success">Success</span>
+    <span class="badge bg-danger">Danger</span>
+    <span class="badge bg-warning">Warning</span>
+    <span class="badge bg-info">Info</span>
+    <span class="badge bg-light">Light</span>
+    <span class="badge bg-dark">Dark</span>
+    <a href="#"><span class="badge bg-primary ms-5">조그만 버튼</span></a>
+
+    <h2 class="mt-4">Pill Badges</h2>
+    <span class="badge rounded-pill bg-primary">2</span>
+    <span class="badge rounded-pill bg-secondary">3</span>
+    <span class="badge rounded-pill bg-success">4</span>
+    <span class="badge rounded-pill bg-danger">5</span>
+    <span class="badge rounded-pill bg-warning">6</span>
+    <span class="badge rounded-pill bg-info">7</span>
+    <span class="badge rounded-pill bg-light">8</span>
+    <span class="badge rounded-pill bg-dark">9</span>
+    <span style="font-size: 24px;"><i class="fa-regular fa-envelope ms-5"></i></span> <span class="badge rounded-pill bg-primary">3</span>
+
+    <h2 class="mt-4">Badge inside a Button</h2>
+    <button type="button" class="btn btn-primary">
+      Messages <span class="badge bg-danger">4</span>
+    </button>
+    <button type="button" class="btn btn-danger">
+      Notifications <span class="badge bg-dark">7</span>
+    </button>
+  </div>
+</body>
+</html>

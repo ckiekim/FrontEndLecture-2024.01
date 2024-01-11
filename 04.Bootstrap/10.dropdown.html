@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<style>
+		* { font-family: 'Noto Sans KR', sans-serif; }
+		a { text-decoration: none; }
+	</style>	
+</head>
+<body>
+  <div class="container-fluid p-3 bg-primary text-white text-center">
+    <h1>부트스트랩 페이지</h1>
+    <p>드롭다운</p> 
+  </div>
+    
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col">
+        <h3>Dropdowns</h3>
+        <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+        <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            드롭다운 메뉴
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link 1</a></li>
+            <li><a class="dropdown-item" href="#">Link 2</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h3>Dropdown Divider</h3>
+        <p>The .dropdown-divider class is used to separate links inside the dropdown menu with a thin horizontal line:</p>
+      
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            드롭다운(구분선)
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link 1</a></li>
+            <li><a class="dropdown-item" href="#">Link 2</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <h3>Dropdown Header</h3>
+        <p>The .dropdown-header class is used to add headers inside the dropdown menu:</p>
+      
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            드롭다운(헤더)
+          </button>
+          <ul class="dropdown-menu">
+            <li><h5 class="dropdown-header">Dropdown header 1</h5></li>
+            <li><a class="dropdown-item" href="#">Link 1</a></li>
+            <li><a class="dropdown-item" href="#">Link 2</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+            <li><h5 class="dropdown-header">Dropdown header 2</h5></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col">
+        <h3>Dropdown Active</h3>
+        <p>The .active class adds a blue background color to the active link.</p>
+        <p>The .disabled class disables a dropdown item (grey text color and a no-parking-sign on hover).</p>
+        
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            드롭다운(액티브)
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Normal</a></li>
+            <li><a class="dropdown-item active" href="#">Active</a></li>
+            <li><a class="dropdown-item disabled" href="#">Disabled</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col"></div>
+      <div class="col"></div>
+    </div>
+  </div>
+</body>
+</html>
