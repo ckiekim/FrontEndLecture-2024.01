@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<style>
+		* { font-family: 'Noto Sans KR', sans-serif; }
+		a { text-decoration: none; }
+	</style>	
+</head>
+<body>
+  <div class="container-fluid p-3 bg-primary text-white text-center">
+    <h1>부트스트랩 페이지</h1>
+    <p>다양한 형태의 폼</p> 
+  </div>
+    
+  <div class="container mt-3">
+    <div class="row">
+      <div class="col">
+        <h2>Checkboxes</h2>
+        <p>To style a checkbox, use a container element with a .form-check class, and add .form-check-label to labels, and .form-check-input to the input with type="checkbox".</p>
+        <p>The form below contains three checkboxes. The first option is checked by default, and the last option is disabled:</p>
+        <form action="/action_page.php">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+            <label class="form-check-label" for="check1">Option 1</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+            <label class="form-check-label" for="check2">Option 2</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" disabled>
+            <label class="form-check-label">Option 3</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        <h2>Radio buttons</h2>
+        <p>The form below contains three radio buttons. The first option is checked by default, and the last option is disabled:</p>
+        <form action="/action_page.php">
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>
+            <label class="form-check-label" for="radio1">Option 1</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+            <label class="form-check-label" for="radio2">Option 2</label>
+          </div>
+          <div class="form-check">
+            <input type="radio" class="form-check-input" disabled>
+            <label class="form-check-label">Option 3</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        <h2>Inline 형태</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+          <input type="radio" name="language" value="ko" checked> 한국어
+          <input class="ms-3" type="radio" name="language" value="en"> 영어
+          <input class="ms-3" type="radio" name="language" value="es"> 스페인어<br>
+          <input type="file" name="file" class="form-control mt-3">
+          <input type="file" name="file2" class="form-control mt-3" multiple>
+          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col">
+        <h2>Input Group</h2>
+        <p>The .input-group class is a container to enhance an input by adding an icon, text or a button in front or behind the input field as a "help text".</p>
+        <p>Use the .input-group-text class to style the specified help text.</p>
+        
+        <form action="/action_page.php">
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input type="text" class="form-control" placeholder="Username" name="usrname">
+          </div>
+      
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your Email" name="email">
+            <span class="input-group-text">@example.com</span>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="col">
+        <h2>Multiple Inputs and Helpers</h2>
+        <p>Add multiple inputs or addons:</p>
+        
+        <!-- Multiple inputs -->
+        <div class="input-group mb-3">
+          <span class="input-group-text">Person</span>
+          <input type="text" class="form-control" placeholder="First Name">
+          <input type="text" class="form-control" placeholder="Last Name">
+        </div>
+      
+        <!-- Multiple addons / help text -->
+        <div class="input-group mb-3">
+          <span class="input-group-text">One</span>
+          <span class="input-group-text">Two</span>
+          <span class="input-group-text">Three</span>
+          <input type="text" class="form-control">
+        </div>
+      </div>
+      <div class="col">
+        <h3>Input Group Buttons</h3>
+  
+        <div class="input-group mb-3 mt-3">
+          <button class="btn btn-outline-primary" type="button">Basic Button</button>
+          <input type="text" class="form-control" placeholder="Some text">
+        </div>
+      
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-success" type="submit">Go</button> 
+        </div>
+      
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Something clever..">
+          <button class="btn btn-primary" type="button">OK</button> 
+          <button class="btn btn-danger" type="button">Cancel</button> 
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
